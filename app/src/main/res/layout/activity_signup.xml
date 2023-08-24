@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context=".SignupActivity">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/re_back_btm"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="33dp"
+                android:background="@drawable/ic_back_calendar_btm"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/su_planet"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/ic_planet"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/re_back_btm" />
+
+            <TextView
+                android:id="@+id/re_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:text="회원가입"
+                android:textColor="#191919"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/su_planet" />
+
+            <TextView
+                android:id="@+id/re_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="회원가입을 위해 필요한 정보를 입력해주세요."
+                android:textColor="#767676"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/re_title" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/re_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_main_rectangle4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/re_des">
+
+                <LinearLayout
+                    android:id="@+id/petnamebox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/petnametitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="이름"
+                        android:textColor="#767676"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/petname"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5sp"
+                        android:background="@drawable/ic_info"
+                        android:ems="10"
+                        android:fontFamily="@font/noto_sans"
+                        android:hint="이름을 입력해주세요."
+                        android:maxLength="10"
+                        android:paddingStart="15sp"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/petbreedbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/petnamebox">
+
+                    <TextView
+                        android:id="@+id/petbreedtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="이메일"
+                        android:textColor="#767676"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/petbreed"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5sp"
+                        android:background="@drawable/ic_info"
+                        android:ems="10"
+                        android:fontFamily="@font/noto_sans"
+                        android:hint="이메일을 입력해주세요."
+                        android:inputType="textEmailAddress"
+                        android:maxLength="35"
+                        android:maxLines="1"
+                        android:paddingStart="15sp"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:id="@+id/cau1"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_caution" />
+
+                    <TextView
+                        android:id="@+id/cautext1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="-20dp"
+                        android:text="정확한 이메일을 입력해주세요."
+                        android:textColor="#C64A4A" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/petgenderbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/petbreedbox">
+
+                    <TextView
+                        android:id="@+id/gendertitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="비밀번호"
+                        android:textColor="#767676"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5sp"
+                        android:background="@drawable/ic_info"
+                        android:ems="10"
+                        android:fontFamily="@font/noto_sans"
+                        android:hint="비밀번호를 8자리 이상 입력해주세요."
+                        android:inputType="textPassword"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:paddingStart="15sp"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:id="@+id/cau2"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_caution" />
+
+                    <TextView
+                        android:id="@+id/cautext2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="-20dp"
+                        android:text="8글자 이상,  특수문자 1자 이상을 입력해주세요."
+                        android:textColor="#C64A4A" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pwdchkbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/petgenderbox">
+
+                    <TextView
+                        android:id="@+id/pwdchktitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="비밀번호 확인"
+                        android:textColor="#767676"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/pwdchk"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5sp"
+                        android:background="@drawable/ic_info"
+                        android:ems="10"
+                        android:fontFamily="@font/noto_sans"
+                        android:hint="비밀번호를 다시 한번 입력해주세요."
+                        android:inputType="textPassword"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:paddingStart="15sp"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:id="@+id/cau3"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_caution" />
+
+                    <TextView
+                        android:id="@+id/cautext3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="-20dp"
+                        android:text="비밀번호 확인과 일치하지 않습니다."
+                        android:textColor="#C64A4A" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/su_btm"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_main_rectangle1"
+                    android:backgroundTint="#E2E2E2"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="다음으로"
+                    android:textColor="#767676"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pwdchkbox" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

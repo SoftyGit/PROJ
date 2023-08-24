@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context=".SignupActivity">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/re_back_btm"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="33dp"
+                android:background="@drawable/ic_back_calendar_btm"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/re_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="누구님, 반가워요!\n반려견 정보를 입력해주세요."
+                android:textColor="#191919"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/re_back_btm" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/re_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/ic_main_rectangle4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/re_title">
+
+                <LinearLayout
+                    android:id="@+id/petnamebox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/petnametitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="반려견 이름"
+                        android:textColor="#767676"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/petname"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5sp"
+                        android:background="@drawable/ic_info"
+                        android:ems="10"
+                        android:fontFamily="@font/noto_sans"
+                        android:hint="이름을 입력해주세요."
+                        android:inputType="textPersonName"
+                        android:maxLength="10"
+                        android:paddingStart="15sp"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/petbreedbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/petnamebox">
+
+                    <TextView
+                        android:id="@+id/petbreedtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="견종"
+                        android:textColor="#767676"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/petbreed"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5sp"
+                        android:background="@drawable/ic_info"
+                        android:ems="10"
+                        android:fontFamily="@font/noto_sans"
+                        android:hint="견종을 작성해주세요."
+                        android:inputType="textEmailAddress"
+                        android:maxLength="35"
+                        android:maxLines="1"
+                        android:paddingStart="15sp"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/petgenderbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/petbreedbox">
+
+                    <TextView
+                        android:id="@+id/gendertitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="반려견 성별"
+                        android:textColor="#767676"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/ic_info" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pwdchkbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/petgenderbox">
+
+                    <TextView
+                        android:id="@+id/pwdchktitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13sp"
+                        android:fontFamily="@font/noto_sans"
+                        android:text="출생 연도"
+                        android:textColor="#767676"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/pwdchk"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5sp"
+                        android:background="@drawable/ic_info"
+                        android:ems="10"
+                        android:fontFamily="@font/noto_sans"
+                        android:hint="출생 연도를 선택해주세요."
+                        android:inputType="textPassword"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:paddingStart="15sp"
+                        android:textColor="#999999"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/su_btm"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_main_rectangle1"
+                    android:backgroundTint="#E2E2E2"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="다음으로"
+                    android:textColor="#767676"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pwdchkbox" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

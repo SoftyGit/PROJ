@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#F8F4EA</color>
+    <color name="accent">#FCCE65</color>
+    <color name="activebtn">#574444</color>
+    <color name="disactivebtn">#E2E2E2</color>
+    <color name="other">#C7DA91</color>
+    <color name="blackfnt">#191919</color>
+    <color name="grayfnt">#767676</color>
+    <color name="whgrayfnt">#999999</color>
+</resources>

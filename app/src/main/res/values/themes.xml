@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PlanetApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="Theme.PlanetAppCalendar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">#FCCE65</item>
+        <item name="android:statusBarColor">#FCCE65</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="Theme.PlanetAppProfile" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">#F8F4EA</item>
+        <item name="android:statusBarColor">#F8F4EA</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="SaveButton" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/other</item>
+    </style>
+
+
+
+</resources>
