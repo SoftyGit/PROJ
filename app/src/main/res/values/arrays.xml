@@ -5,4 +5,21 @@
         <item>암컷 ♀</item>
         <item>수컷 ♂</item>
     </string-array>
+    <string-array name="birth_options">
+        <item></item>
+        <item>모름</item>
+        <item>2023년생</item>
+        <item>2022년생</item>
+        <item>2021년생</item>
+        <item>2020년생</item>
+        <item>2019년생</item>
+        <item>2018년생</item>
+        <item>2017년생</item>
+        <item>2016년생</item>
+        <item>2015년생</item>
+        <item>2014년생</item>
+        <item>2013년생</item>
+        <item>2012년 이전</item>
+
+    </string-array>
 </resources>

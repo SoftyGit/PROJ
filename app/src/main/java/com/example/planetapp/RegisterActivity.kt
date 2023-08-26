@@ -22,11 +22,20 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         val genderSpinner: Spinner = findViewById(R.id.gender)
+        val petbirthSpinner: Spinner = findViewById(R.id.petbirth)
 
         ArrayAdapter.createFromResource(
             this,
             R.array.gender_options,
-            R.layout.spinner_gender
+            R.layout.spinner_petgender
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            genderSpinner.adapter = adapter
+        }
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.birth_options,
+            R.layout.spinner_petbirth
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             genderSpinner.adapter = adapter
@@ -34,11 +43,22 @@ class RegisterActivity : AppCompatActivity() {
 
         // 초기 항목을 선택되지 않은 상태로 설정합니다.
         genderSpinner.setSelection(-1)
-
         genderSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                if (position != 0 && position != 1) { // 빈 항목과 "성별을 선택해주세요."가 선택되지 않았을 때
+                if (position != 0) {
                     val selectedGender = parent.getItemAtPosition(position) as String
+                }
+            }
+            override fun onNothingSelected(parent: AdapterView<*>) {
+                // Nothing selected
+            }
+        }
+        // 초기 항목을 선택되지 않은 상태로 설정합니다.
+        petbirthSpinner.setSelection(-1)
+        petbirthSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                if (position != 0) {
+                    val selectedBirth = parent.getItemAtPosition(position) as String
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>) {
