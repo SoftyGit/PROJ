@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            tools:context=".SignupActivity">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pp_back_btm"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="33dp"
+                android:background="@drawable/ic_back_calendar_btm"
+                android:clickable="false"
+                android:focusable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pp_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:text="누구님, 반가워요!\n반려견 사진을 등록해주세요."
+                android:textColor="#191919"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pp_back_btm" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pp_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/ic_main_rectangle4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pp_title">
+
+                <ImageView
+                    android:id="@+id/picture_pet"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="120dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_picture_register_foreground" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/pp_btm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/ic_main_rectangle1"
+                    android:backgroundTint="#E2E2E2"
+                    android:fontFamily="@font/noto_sans"
+                    android:text="다음으로"
+                    android:textAlignment="center"
+                    android:textColor="#767676"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/picture_pet" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

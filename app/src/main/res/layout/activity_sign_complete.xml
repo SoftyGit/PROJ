@@ -7,7 +7,7 @@
     tools:context=".SignCompleteActivity">
 
     <ImageView
-        android:id="@+id/sc_planet"
+        android:id="@+id/pc_planet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="120dp"
@@ -29,7 +29,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/sc_planet"
+        app:layout_constraintStart_toEndOf="@id/pc_planet"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -44,14 +44,16 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/sc_planet"
+        app:layout_constraintStart_toEndOf="@id/pc_planet"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/welcometext"
-        android:layout_width="300dp"
+        android:id="@+id/pc_welcomebox"
+        android:layout_width="0dp"
         android:layout_height="70dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/ic_main_rectangle6"
         android:backgroundTint="@color/background"
         android:gravity="center"
@@ -59,15 +61,18 @@
         android:textAlignment="center"
         android:textColor="#191919"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sc_planet" />
+        app:layout_constraintTop_toBottomOf="@id/pc_planet" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/sc_btm"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
+        android:id="@+id/pc_btm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="120dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/ic_main_rectangle1"
         android:backgroundTint="@color/activebtn"

@@ -17,7 +17,7 @@
             tools:context=".SignupActivity">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/re_back_btm"
+                android:id="@+id/su_back_btm"
                 android:layout_width="10dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="20dp"
@@ -36,10 +36,10 @@
                 android:layout_marginTop="20dp"
                 android:src="@mipmap/ic_planet"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/re_back_btm" />
+                app:layout_constraintTop_toBottomOf="@id/pr_back_btm" />
 
             <TextView
-                android:id="@+id/re_title"
+                android:id="@+id/pr_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -60,10 +60,10 @@
                 android:textColor="#767676"
                 android:textSize="13sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/re_title" />
+                app:layout_constraintTop_toBottomOf="@id/pr_title" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/re_toolbar"
+                android:id="@+id/pr_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="15dp"
@@ -157,7 +157,8 @@
                         android:layout_height="18dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/ic_caution" />
+                        android:src="@drawable/ic_caution"
+                        android:visibility="invisible" />
 
                     <TextView
                         android:id="@+id/cautext1"
@@ -166,7 +167,8 @@
                         android:layout_marginStart="34dp"
                         android:layout_marginTop="-20dp"
                         android:text="정확한 이메일을 입력해주세요."
-                        android:textColor="#C64A4A" />
+                        android:textColor="#C64A4A"
+                        android:visibility="invisible" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -214,7 +216,8 @@
                         android:layout_height="18dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/ic_caution" />
+                        android:src="@drawable/ic_caution"
+                        android:visibility="invisible" />
 
                     <TextView
                         android:id="@+id/cautext2"
@@ -223,7 +226,8 @@
                         android:layout_marginStart="34dp"
                         android:layout_marginTop="-20dp"
                         android:text="8글자 이상,  특수문자 1자 이상을 입력해주세요."
-                        android:textColor="#C64A4A" />
+                        android:textColor="#C64A4A"
+                        android:visibility="invisible" />
 
                 </LinearLayout>
 
@@ -272,7 +276,8 @@
                         android:layout_height="18dp"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/ic_caution" />
+                        android:src="@drawable/ic_caution"
+                        android:visibility="invisible" />
 
                     <TextView
                         android:id="@+id/cautext3"
@@ -281,14 +286,17 @@
                         android:layout_marginStart="34dp"
                         android:layout_marginTop="-20dp"
                         android:text="비밀번호 확인과 일치하지 않습니다."
-                        android:textColor="#C64A4A" />
+                        android:textColor="#C64A4A"
+                        android:visibility="invisible" />
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/su_btm"
-                    android:layout_width="350dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
                     android:background="@drawable/ic_main_rectangle1"
                     android:backgroundTint="#E2E2E2"
                     android:fontFamily="@font/noto_sans"

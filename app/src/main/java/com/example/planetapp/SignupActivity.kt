@@ -29,9 +29,9 @@ class SignupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup) // XML 파일 이름에 따라 변경해야 합니다.
+        setContentView(R.layout.activity_signup)
 
-        val startButton = findViewById<Button>(R.id.re_back_btm)
+        val startButton = findViewById<Button>(R.id.su_back_btm)
         startButton.setOnClickListener{
             val intent = Intent(this, StartActivity::class.java)
             startActivity(intent)
@@ -79,13 +79,12 @@ class SignupActivity : AppCompatActivity() {
         val addButton = findViewById<Button>(R.id.su_btm)
         addButton.setOnClickListener{
             if (addButton.isEnabled) {
-                Toast.makeText(this, "버튼클릭요^^", Toast.LENGTH_SHORT).show()
                 // 입력 부분 전달 //
                 val user = User(nameEditText.text.toString(), mailEditText.text.toString(), pwdEditText.text.toString())
                 service.registerUser(user).enqueue(object : Callback<ResponseBody> {
                     override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                         Log.d("SignupActivity", "API 응답 받음: ${response.code()}")
-                        if(response.isSuccessful) {
+                        if(!response.isSuccessful) { // !!!테스트용 "!" 빼야함 //
                             val intent = Intent(this@SignupActivity, SignActivity::class.java)
                             startActivity(intent)
                         } else {
@@ -97,7 +96,7 @@ class SignupActivity : AppCompatActivity() {
                     override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                         Log.d("SignupActivity", "API 호출 실패: ${t.message}")
                         // 네트워크 오류 발생 시 처리
-                        Toast.makeText(this@SignupActivity, "연결 실패", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@SignupActivity, "인터엣 연결 상태를 확인해주세요.", Toast.LENGTH_SHORT).show()
                     }
                 })
             }

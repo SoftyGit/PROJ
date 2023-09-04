@@ -9,15 +9,21 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 
-class RegisterActivity : AppCompatActivity() {
+class PetRegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_pet_register)
 
 
-        val startButton = findViewById<Button>(R.id.re_back_btm)
-        startButton.setOnClickListener{
+        val backButton = findViewById<Button>(R.id.pr_back_btm)
+        backButton.setOnClickListener{
             val intent = Intent(this, SignCompleteActivity::class.java)
+            startActivity(intent)
+        }
+
+        val startButton = findViewById<Button>(R.id.pr_btm)
+        startButton.setOnClickListener{
+            val intent = Intent(this, PetPictureActivity::class.java)
             startActivity(intent)
         }
 
@@ -38,7 +44,7 @@ class RegisterActivity : AppCompatActivity() {
             R.layout.spinner_petbirth
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            genderSpinner.adapter = adapter
+            petbirthSpinner.adapter = adapter
         }
 
         // 초기 항목을 선택되지 않은 상태로 설정합니다.
